@@ -1,0 +1,32 @@
+
+
+<div>
+  <h2>Pizza Konfigurator</h2>
+
+  <div>
+    <h3>Größe:</h3>
+    <button (click)="setSize('kelin')">28cm</button>
+    <button (click)="setSize('klein')">32cm</button>
+    <button (click)="setSize('Mittel')">38cm</button>
+    <button (click)="setSize('Groß')">42cm</button>
+  </div>
+
+  
+  <div>
+    <h3>Zutaten:</h3>
+    <button (click)="toggleIngredients()">Zutaten anzeigen</button>
+    <div *ngIf="showIngredients" style="max-height: 200px; overflow-y: auto;">
+    
+      <button *ngFor="let topping of belaege" (click)="toggleTopping(topping)">{{ topping }}</button>
+    </div>
+  </div>
+
+  <div>
+    <h3>Auswahl:</h3>
+   
+    <p>Größe: {{ pizzaOptions.size }}</p>
+    <p>Zutaten: {{ pizzaOptions.belaege.join(', ') }}</p>
+  </div>
+</div>
+
+
