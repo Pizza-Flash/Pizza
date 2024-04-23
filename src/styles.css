@@ -1,30 +1,34 @@
-/* Add application styles & imports to this file! */
 body{
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #e40d0d91, #f7ef1c, #f31e1ecc);
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background: linear-gradient(to bottom, #e40d0d91, #f7ef1c, #f31e1ecc);
 }
+
 header {
   background-color: #690000
-;
+  ;
   color: #fff;
   padding: 10px;
   text-align: center;
 
 }
 nav {
-  background-color: #f31e1ecc;
+  background-image:url("https://i.postimg.cc/52RSTxpS/schiefer.jpg");
   padding: 10px;
   text-align-last: center;
-
-
 }
 nav a {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
 
+
   margin: 0 10px;
+}
+nav a:hover {
+  background-color: #ff7777;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
 }
 na {
   margin-left: 90%;
@@ -37,6 +41,14 @@ na {
 }
 nav a:hover {
   text-decoration: underline;
+}
+.container {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 .container {
   width: 80%;
