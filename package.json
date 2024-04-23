@@ -21,7 +21,7 @@
     "bootstrap": "^5.3.3",
     "boxicons": "^2.1.4",
     "crypto-js": "^4.2.0",
-    "fluid-player": "^3.32.0",
+    "fluid-player": "^1.0.15",
     "route": "^0.2.5",
     "rxjs": "~7.8.0",
     "three": "^0.160.1",
