@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router, RouterEvent } from '@angular/router';
 
 @Component({
   selector: 'app-anmelden',
@@ -39,11 +40,11 @@ this.  signupObj = {
   alert('Erfolgreich Registiert!')
 }
   onLogin() {
-    const isUserExist = this.signupUser.find(m => m.username == 
-      this.loginObj.username && m.passwort  == 
+    const isUserExist = this.signupUser.find(m => m.username ==
+      this.loginObj.username && m.passwort  ==
       this.loginObj.passwort);
       if (isUserExist != undefined) {
-        alert('Log In Erfolgreich')
+
       }
       else alert('Benutzername oder Passwort sind Falsch!')
   }

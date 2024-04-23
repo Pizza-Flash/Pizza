@@ -4,6 +4,7 @@ import {AnmeldenComponent} from "../anmelden/anmelden.component";
 import {WarenkorbComponent} from "../warenkorb/warenkorb.component";
 import {CheckoutComponent} from "../checkout/checkout.component";
 import { LieferadresseFormComponent } from '../lieferadresse.form/lieferadresseForm.component';
+import { KonfiguratorComponent } from '../konfigurator/konfigurator.component';
 
 export const routes: Routes = [
   {
@@ -31,4 +32,8 @@ export const routes: Routes = [
     path : 'Adresse',
     component:LieferadresseFormComponent
   },
+  {
+    path : 'Konfigurator',
+    component: KonfiguratorComponent
+  }
 ];

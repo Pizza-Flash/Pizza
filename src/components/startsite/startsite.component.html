@@ -5,17 +5,10 @@
     <title>Pizza Flash</title>
   </head>
   <body>
-    <header>
-      <h1>Pizza Flash</h1>
-    </header>
 
-    <nav>
-      <a href="#"> &#8203; Startseite  &#8203;</a>
-      <a href="#"> &#8203; Kontakt  &#8203;</a>
-      <a href="#"> &#8203; Anmelden  &#8203;</a>
-      <a href="#"> &#8203; Konfigurator  &#8203;</a>
-      <a href="cart">Warenkorb</a>
-    </nav>
+<div class="Warenkorblink"><a href="cart">Warenkorb</a></div>
+
+
     <div class="container">
       <h2 style="color: white;">Unsere Klassiker</h2>
       <div class="pizza-menu">
@@ -41,6 +34,7 @@
             </button>
           </div>
           <p>Preis: 7,50€</p>
+
         </div>
         <div class="pizza-item">
           <div class="pizzaimagebox">
@@ -62,12 +56,13 @@
             <button (click)="addPizzaSalami()">Pizza Salami hinzufügen</button>
           </div>
           <p>Preis: 9,00€</p>
+
         </div>
 
         <div class="pizza-item">
           <div class="pizzaimagebox">
-            <img src="https://i.imgur.com/hr8J5QT.jpeg" alt="Pizza Sucuk" />
-          </div>
+          <img src="https://i.imgur.com/hr8J5QT.jpeg" alt="Pizza Sucuk" />
+        </div>
 
           <h3>Pizza Sucuk</h3>
           <p>Pizza mit Tomatensauce, Mozzarella und Knoblauchwurst.</p>
@@ -81,6 +76,7 @@
             <button (click)="addPizzaSucuk()">Pizza Sucuk hinzufügen</button>
           </div>
           <p>Preis: 9,00€</p>
+
         </div>
         <div class="pizza-item">
           <div class="pizzaimagebox">
