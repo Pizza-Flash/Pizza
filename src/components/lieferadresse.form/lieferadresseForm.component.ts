@@ -11,7 +11,6 @@ import {UnternehmenService} from "../../services/unternehmen.service";
   standalone: true,
   imports: [
     FormsModule,
-    LieferadresseListComponent,
   ],
   templateUrl: './lieferadresseForm.component.html',
   styleUrls: ['./lieferadresseForm.component.css'],
