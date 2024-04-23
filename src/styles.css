@@ -6,12 +6,11 @@ body{
 }
 
 header {
-  background-color: #690000
-  ;
-  color: #fff;
+  background-image:url("https://i.pinimg.com/originals/b7/3b/dd/b73bdddf41c18630a04aa74d6b836daa.jpg");
+  background-position: center;
+  color: rgb(205, 219, 14);
   padding: 10px;
   text-align: center;
-
 }
 nav {
   background-image:url("https://i.postimg.cc/52RSTxpS/schiefer.jpg");
