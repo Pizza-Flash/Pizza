@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+header {
+  background-image:url("https://i.pinimg.com/originals/b7/3b/dd/b73bdddf41c18630a04aa74d6b836daa.jpg");
+  background-position: center;
+  color: rgb(205, 219, 14);
+  padding: 10px;
+  text-align: center;
+}
+nav {
+  background-image:url("https://i.postimg.cc/52RSTxpS/schiefer.jpg");
+  padding: 10px;
+  text-align-last: center;
+}
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+
+
+  margin: 0 10px;
+}
+nav a:hover {
+  background-color: #ff7777;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+}
+na {
+  margin-left: 90%;
+  position: fixed;
+  background-color: #f090238a;
+
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  text-align: right;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+.container {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+footer {
+  background-color: #690000;
+  color: #fff;
+  padding: 1px;
+  text-align: center;
+  position: bottom;
+  bottom: 0;
+  width: 100%;
+}
