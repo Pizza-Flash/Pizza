@@ -1,4 +1,6 @@
 export class Pizza {
+  standalone: true
+
   constructor(
     public pzzaid:number,
     public pizzavariante:string,

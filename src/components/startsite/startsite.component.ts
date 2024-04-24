@@ -1,5 +1,6 @@
 import { Component, isStandalone, OnInit } from '@angular/core';
 
+<<<<<<< Updated upstream
 import { PizzenService } from '../../services/Pizzen.service';
   @Component({
   selector: 'app-startsite',
@@ -8,6 +9,18 @@ import { PizzenService } from '../../services/Pizzen.service';
         standalone: true,
       providers:[PizzenService]
       
+=======
+      import { Component, isStandalone, OnInit } from '@angular/core';
+import { Pizza } from '../../models/pizza';
+import { PizzenService } from '../../services/pizzen.Service';
+
+      @Component({
+        selector: 'app-startsite',
+        templateUrl: './startsite.component.html',
+        styleUrls: ['./startsite.component.css'],
+        standalone: true,
+        imports: [],
+>>>>>>> Stashed changes
       })
 
 
@@ -16,10 +29,20 @@ import { PizzenService } from '../../services/Pizzen.service';
 [x: string]: any;
         pizzaListe: { name: string, preis: number, menge: number }[] = [];
 
+<<<<<<< Updated upstream
         constructor(private pizzenService: PizzenService) { }
+=======
+        constructor(
+          private pizzen:PizzenService
+        ) {}
+>>>>>>> Stashed changes
 
         ngOnInit() {
+          PizzenService
+          Pizza
         }
+
+
 
         pizzaOptions = { size: '', };
         setSize(size: string) {
