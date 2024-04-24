@@ -1,22 +1,17 @@
-import { Component, isStandalone, OnInit } from '@angular/core';
 
-import { PizzenService } from '../../services/Pizzen.service';
-  @Component({
-  selector: 'app-startsite',
-  templateUrl: './startsite.component.html',
+      import { Component, isStandalone, OnInit } from '@angular/core';
+
+      @Component({
+        selector: 'app-startsite',
+        templateUrl: './startsite.component.html',
         styleUrls: ['./startsite.component.css'],
         standalone: true,
-      providers:[PizzenService]
-      
       })
-
-
-
       export class StartsiteComponent implements OnInit {
-[x: string]: any;
+
         pizzaListe: { name: string, preis: number, menge: number }[] = [];
 
-        constructor(private pizzenService: PizzenService) { }
+        constructor() { }
 
         ngOnInit() {
         }
@@ -35,8 +30,6 @@ import { PizzenService } from '../../services/Pizzen.service';
             this.pizzaListe.push({ name, preis, menge: 1 });
           }
         }
-
-
 
         addPizzaMargherita(): void {
           this.artikelHinzufügen('Pizza Margherita', 7.50);
