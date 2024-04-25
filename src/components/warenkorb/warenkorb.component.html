@@ -1,36 +1,35 @@
 
 <div>
   <h2>Warenkorb</h2>
-  
 
-  <div *ngIf="artikelListe.length > 0">
+
+  <div *ngIf="warenkorb.warenkorb.length > 0">
     <ul>
-     
-      <li *ngFor="let artikel of artikelListe" class="warenkorb-artikel">
-     
+
+      <li *ngFor="let artikel of warenkorb.warenkorb" class="warenkorb-artikel">
+
         <div class="artikel-details">
-          <span class="artikel-name">{{ artikel.name }}</span> 
-          <span class="artikel-menge">{{ artikel.menge }} Stück </span> 
+          <span class="artikel-name">{{ artikel.name }}</span>
+          <span class="artikel-menge">{{ artikel.menge }} Stück </span>
           <span class="artikel-preis">{{ artikel.preis }} € </span>
         </div>
-      
+
         <button class="entfernungs-button" (click)="removeArtikel(artikel.name)">Artikel entfernen</button>
       </li>
     </ul>
   </div>
-  <div *ngIf="artikelListe.length === 0">
+  <div *ngIf="warenkorb.warenkorb.length === 0">
     Der Warenkorb ist leer.
   </div>
 
 
   <p class="gesamt-anzahl">Gesamtanzahl der Artikel: {{ gesamtAnzahlArtikel() }}</p>
 
-  
+
   <p class="gesamt-preis">Gesamtpreis: {{ gesamtPreis() }} €</p>
 
 
-  <div class="artikel-hinzufuegen">
-    <button (click)="addPizzaMargherita()">Pizza Margherita hinzufügen</button>
-    <button (click)="addPizzaTunfisch()">Pizza Tunfisch hinzufügen</button>
-  </div>
+
+<a href="chekout">Bezahhlen/Checkout</a>
+
 </div>

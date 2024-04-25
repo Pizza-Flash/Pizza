@@ -1,5 +1,6 @@
 body {
   font-family: Arial, sans-serif;
+  background-image: url("https://i.pinimg.com/736x/61/0f/43/610f43a7e8d83be4d5b6000f71971a4a.jpg");
 }
 
 h1 {
@@ -14,7 +15,7 @@ h1 {
 
 #pizza-selection div {
   width: 200px;
-  border: 1px solid rgb(253, 253, 253);
+  border: 1px solid rgb(187, 159, 2);
   border-radius: 5px;
   padding: 10px;
   margin: 10px;

@@ -1,47 +1,51 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { WarenkorbService } from '../../services/warenkorb.service';
 
 @Component({
   standalone:true,
   selector: 'app-warenkorb',
   templateUrl: './warenkorb.component.html',
   styleUrls: ['./warenkorb.component.css'],
-  imports: [CommonModule] 
+  imports: [CommonModule],
+  providers:[WarenkorbService]
 })
 export class WarenkorbComponent {
-  artikelListe: { name: string, preis: number, menge: number }[] = [];
+  constructor(
+    public warenkorb: WarenkorbService
+  ){}
 
- 
+
   artikelHinzufügen(name: string, preis: number): void {
-    const vorhandenerArtikel = this.artikelListe.find(artikel => artikel.name === name);
+    const vorhandenerArtikel = this.warenkorb.warenkorb.find(artikel => artikel.name === name);
     if (vorhandenerArtikel) {
       vorhandenerArtikel.menge++;
     } else {
-      this.artikelListe.push({ name, preis, menge: 1 });
+      this.warenkorb.warenkorb.push({ name, preis, menge: 1 });
     }
   }
 
 
   artikelEntfernen(name: string): void {
-    const index = this.artikelListe.findIndex(artikel => artikel.name === name);
+    const index = this.warenkorb.warenkorb.findIndex(artikel => artikel.name === name);
     if (index !== -1) {
-      const artikel = this.artikelListe[index];
+      const artikel = this.warenkorb.warenkorb[index];
       if (artikel.menge > 1) {
         artikel.menge--;
       } else {
-        this.artikelListe.splice(index, 1);
+        this.warenkorb.warenkorb.splice(index, 1);
       }
     }
   }
 
 
   gesamtAnzahlArtikel(): number {
-    return this.artikelListe.reduce((gesamt, artikel) => gesamt + artikel.menge, 0);
+    return this.warenkorb.warenkorb.reduce((gesamt, artikel) => gesamt + artikel.menge, 0);
   }
 
-  
+
   gesamtPreis(): number {
-    return this.artikelListe.reduce((gesamt, artikel) => gesamt + (artikel.preis * artikel.menge), 0);
+    return this.warenkorb.warenkorb.reduce((gesamt, artikel) => gesamt + (artikel.preis * artikel.menge), 0);
   }
 
 
