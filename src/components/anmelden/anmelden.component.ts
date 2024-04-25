@@ -21,36 +21,35 @@ export class AnmeldenComponent implements OnInit {
     username: '',
     passwort: ''
   };
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     const localData = localStorage.getItem('signUpUsers')
-    if(localData !=null) {
+    if (localData != null) {
       this.signupUser = JSON.parse(localData)
     }
   }
   onSignUp() {
-this.signupUser.push(this.signupObj)
-localStorage.setItem('signUpUsers', JSON.stringify(this.signupUser))
-this.  signupObj = {
-  username: '',
-  email: '',
-  passwort: ''
+    this.signupUser.push(this.signupObj)
+    localStorage.setItem('signUpUsers', JSON.stringify(this.signupUser))
+    this.signupObj = {
+      username: '',
+      email: '',
+      passwort: ''
 
-  };
-  RouterLinkActive(home)
-  alert('Erfolgreich Registiert!'
+    };
 
-  )
-}
+    alert('Erfolgreich Registiert!'
+
+    )
+  }
   onLogin() {
-    const isUserExist = this.signupUser.find(m => m.username ==
-      this.loginObj.username && m.passwort  ==
+    const isUserExist = this.signupUser.find(m => m.username == this.loginObj.username && m.passwort ==
       this.loginObj.passwort);
-      if (isUserExist != undefined) {
-        alert('Log In Erfolgreich')
-      }
-      else alert('Benutzername oder Passwort sind Falsch!')
+    if (isUserExist != undefined) {
+      alert('Log In Erfolgreich')
+    }
+    else alert('Benutzername oder Passwort sind Falsch!')
   }
 
 }
