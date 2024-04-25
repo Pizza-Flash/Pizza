@@ -1,19 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { WarenkorbService } from '../../services/warenkorb.service';
+import { KonfiguratorComponent } from "../konfigurator/konfigurator.component";
 
 @Component({
-  standalone:true,
-  selector: 'app-warenkorb',
-  templateUrl: './warenkorb.component.html',
-  styleUrls: ['./warenkorb.component.css'],
-  imports: [CommonModule],
-  providers:[WarenkorbService]
+    standalone: true,
+    selector: 'app-warenkorb',
+    templateUrl: './warenkorb.component.html',
+    styleUrls: ['./warenkorb.component.css'],
+    providers: [WarenkorbService],
+    imports: [CommonModule, KonfiguratorComponent]
 })
 export class WarenkorbComponent {
   constructor(
     public warenkorb: WarenkorbService
-  ){}
+  ){ }
 
 
   ngOnInit() {
@@ -23,12 +24,14 @@ export class WarenkorbComponent {
       }
   }
 
+  
+
   artikelHinzufügen(name: string, preis: number): void {
     const vorhandenerArtikel = this.warenkorb.warenkorb.find(artikel => artikel.name === name);
     if (vorhandenerArtikel) {
       vorhandenerArtikel.menge++;
     } else {
-      this.warenkorb.warenkorb.push({ name, preis, menge: 1 });
+      this.warenkorb.warenkorb.push({ name, preis, menge: 1 ,});
       localStorage.setItem('warenkorb', JSON.stringify(this.warenkorb))
     }
   }

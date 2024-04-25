@@ -47,7 +47,7 @@ export class StartsiteComponent implements OnInit {
       vorhandenerArtikel.menge++;
     } else {
       this.warenkorb.warenkorb.push({ name, preis, menge: 1 });
-      console.log(this.warenkorb.warenkorb);
+
       localStorage.setItem('warenkorb', JSON.stringify(this.warenkorb))
     }
   }

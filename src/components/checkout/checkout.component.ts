@@ -15,9 +15,13 @@ import { Router } from '@angular/router';
 export class CheckoutComponent implements OnInit {
 
   constructor(private router: Router) { }
-
-  ngOnInit() {
+  ngOnInit(): void {
+    
   }
+
+  
+
+
 
 
   

@@ -1,0 +1,97 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #e40d0d91, #f7ef1c, #f31e1ecc);
+  background-size: 100%;
+}
+header {
+  background-image:url("https://i.pinimg.com/originals/b7/3b/dd/b73bdddf41c18630a04aa74d6b836daa.jpg");
+  background-position: center;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  text-align: center;
+}
+.container {
+  width: max-content;
+  margin: 20px auto;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-image:url("https://i.postimg.cc/52RSTxpS/schiefer.jpg");
+  text-align: center;
+}
+.ingredient-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+.ingredient-table {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-rendering: auto;
+  text-align: left;
+  background-color: #fff;
+  table-layout: fixed; 
+}
+.ingredient-table thead tr {
+  background-color: rgb(139, 1, 1);
+  color: #ffffff;
+  text-align: center;
+}
+.ingredient-table th,
+.ingredient-table td {
+    padding: 12px 15px;
+    min-width: 100px; 
+}
+.ingredient-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.ingredient-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.ingredient-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+button {
+  padding: 8px 16px;
+  border: none;
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b33300;
+}
+
+.cart-container {
+  background: linear-gradient(to bottom, #e40d0d91, #f7ef1c, #f31e1ecc);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(190, 12, 12, 0.1);
+  text-align: center;
+}
+
+.total-price {
+  font-weight: bold;
+  margin-top: 10px;
+  color: black;
+  text-align: center;
+}
+
+.ingredient-item {
+  padding: 15px;
+  background-color: #ffcc00;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}

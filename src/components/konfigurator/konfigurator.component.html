@@ -1,32 +1,78 @@
-
-
-<div>
-  <h2>Pizza Konfigurator</h2>
-
-  <div>
-    <h3>Größe:</h3>
-    <button (click)="setSize('kelin')">28cm</button>
-    <button (click)="setSize('klein')">32cm</button>
-    <button (click)="setSize('Mittel')">38cm</button>
-    <button (click)="setSize('Groß')">42cm</button>
-  </div>
-
-  
-  <div>
-    <h3>Zutaten:</h3>
-    <button (click)="toggleIngredients()">Zutaten anzeigen</button>
-    <div *ngIf="showIngredients" style="max-height: 200px; overflow-y: auto;">
-    
-      <button *ngFor="let topping of belaege" (click)="toggleTopping(topping)">{{ topping }}</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konfigurator</title>
+</head>
+<body>
+  <div class="container">
+    <h2 style="color: white;">Zutaten</h2>
+    <div class="ingredient-container">
+      <table class="ingredient-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Preis</th>
+            <th>Menge</th>
+            <th></th>
+            <th>Name</th>
+            <th>Preis</th>
+            <th>Menge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let ingredient of ingredients; let i = index">
+            <tr *ngIf="i % 2 === 0">
+              <td>{{ ingredients[i].name }}</td>
+              <td>{{ ingredients[i].price }} €</td>
+              <td>
+                <button (click)="removeIngredient(ingredients[i])">-</button>
+                {{ getTotalQuantity(ingredients[i]) }}
+                <button (click)="addIngredient(ingredients[i])">+</button>
+              </td>
+              <td></td>
+              <td *ngIf="i + 1 < ingredients.length">{{ ingredients[i + 1].name }}</td>
+              <td *ngIf="i + 1 < ingredients.length">{{ ingredients[i + 1].price }} €</td>
+              <td *ngIf="i + 1 < ingredients.length">
+                <button (click)="removeIngredient(ingredients[i + 1])">-</button>
+                {{ getTotalQuantity(ingredients[i + 1]) }}
+                <button (click)="addIngredient(ingredients[i + 1])">+</button>
+              </td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
     </div>
-  </div>
+    <div class="cart-container">
+      <div *ngIf="selectedIngredients.length > 0" style="text-align: center;">
+        <h3 style="margin-bottom: 10px;">Zutatenpreis</h3>
+        <div style="display: flex; justify-content: center; gap: 20px;">
+          <div>
+            <ul>
+              <p *ngFor="let item of selectedIngredients">
+                {{ item.name }}: {{ item.quantity }} Stück
+              </p>
+              <p>Gesamtmenge aller Zutaten: {{ getTotalItems() }}</p>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <p *ngFor="let item of selectedIngredients" class="cart-item">
+                <span>{{ item.name }}</span>
+                <span>{{ item.price * item.quantity }} €</span>
+              </p>
+              <p class="total-price">Gesamtpreis: {{ totalPrice() }} €</p>
+            </ul>
+          </div>
 
-  <div>
-    <h3>Auswahl:</h3>
-   
-    <p>Größe: {{ pizzaOptions.size }}</p>
-    <p>Zutaten: {{ pizzaOptions.belaege.join(', ') }}</p>
-  </div>
-</div>
+          
+
+          </div>
+        </div>
+
+      <div *ngIf="selectedIngredients.length === 0">
+        Da sind keine Zutaten vorhanden.</div>
 
 
+        

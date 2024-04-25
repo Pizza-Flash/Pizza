@@ -1,10 +1,9 @@
+import { ZutatenService } from "../services/zutaten.service";
 
-
-export class warenkorb {
+export class zutaten {
   constructor(
     public  name: string,
     public preis:number,
     public menge: number,
-    
   ) {}
 }
