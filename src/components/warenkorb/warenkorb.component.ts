@@ -16,12 +16,20 @@ export class WarenkorbComponent {
   ){}
 
 
+  ngOnInit() {
+      const localData = localStorage.getItem('warenkorb')
+      if (localData != null) {
+        this.warenkorb = JSON.parse(localData)
+      }
+  }
+
   artikelHinzufügen(name: string, preis: number): void {
     const vorhandenerArtikel = this.warenkorb.warenkorb.find(artikel => artikel.name === name);
     if (vorhandenerArtikel) {
       vorhandenerArtikel.menge++;
     } else {
       this.warenkorb.warenkorb.push({ name, preis, menge: 1 });
+      localStorage.setItem('warenkorb', JSON.stringify(this.warenkorb))
     }
   }
 
@@ -46,16 +54,6 @@ export class WarenkorbComponent {
 
   gesamtPreis(): number {
     return this.warenkorb.warenkorb.reduce((gesamt, artikel) => gesamt + (artikel.preis * artikel.menge), 0);
-  }
-
-
-  addPizzaMargherita(): void {
-    this.artikelHinzufügen('Pizza Margherita', 8.50);
-  }
-
-
-  addPizzaTunfisch(): void {
-    this.artikelHinzufügen('Pizza Tunfisch', 9.50);
   }
 
 

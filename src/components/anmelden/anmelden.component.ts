@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterEvent, RouterLinkActive } from '@angular/router';
 import { AppRoutingModule, routes } from '../app/app.routes';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-anmelden',
@@ -21,7 +22,7 @@ export class AnmeldenComponent implements OnInit {
     username: '',
     passwort: ''
   };
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     const localData = localStorage.getItem('signUpUsers')
@@ -49,6 +50,7 @@ export class AnmeldenComponent implements OnInit {
       this.loginObj.passwort);
     if (isUserExist != undefined) {
             alert('Log In Erfolgreich')
+            this.router.navigate(['/home'])
     }
     else alert('Benutzername oder Passwort sind Falsch!')
   }

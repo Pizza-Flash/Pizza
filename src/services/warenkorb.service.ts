@@ -10,7 +10,7 @@ import { warenkorb } from '../models/warenkorb';
 export class WarenkorbService {
   warenkorb: warenkorb[] = [];
   constructor() {
-    this.warenkorb.map
+    warenkorb:warenkorb;
 
   }
 }

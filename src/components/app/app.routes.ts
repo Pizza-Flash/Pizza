@@ -14,7 +14,8 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    component: StartsiteComponent
+    component: StartsiteComponent,
+    
   },
   {
     path: 'login',
@@ -23,6 +24,11 @@ export const routes: Routes = [
   {
     path: 'cart',
     component: WarenkorbComponent
+    
+  },
+  {
+    path: 'cart/:warenkorb',
+    component:WarenkorbComponent
   },
   {
     path: 'checkout',

@@ -4,10 +4,20 @@
 
 <head>
   <title>Pizza Flash</title>
+  
+
 </head>
 
 <body>
-
+  <header>
+    <nav>
+    <a href="cart"> &#8203; Warenkorb &#8203;</a>
+    <a href="checkout"> &#8203; Checkout &#8203;</a>
+    </nav>
+  </header>
+  <nav>
+  
+  </nav>
 
 
   <div class="container">
@@ -24,19 +34,19 @@
 
           <h3>{{p.pizzavariante }}</h3>
           <p>{{p.pizzabeschribung }}</p>
-          <h3>Größe:</h3>
-          <button (click)="setSize('klein')">28cm</button>
-          <button (click)="setSize('mittel')">32cm</button>
-          <button (click)="setSize('Groß')">40cm</button>
+          <h3>Größe: 32</h3>
+          
           <br />
           <br />
-          <button (click)="addPizza(p.pizzavariante,p.pizzapreis)">
+          <button (click)="addPizza(p.pizzavariante,p.pizzapreis)" (click)="popup" >
             Pizza hinzufügen
           </button>
+          
           <p>{{p.pizzapreis}} €</p>
+        
 
         </div>
-
+        
       }
       
     </div>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { WarenkorbComponent } from '../warenkorb/warenkorb.component';
 import { LieferadresseFormComponent } from '../lieferadresse.form/lieferadresseForm.component';
+import { AppComponent } from '../app/app.component';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,13 +10,16 @@ import { LieferadresseFormComponent } from '../lieferadresse.form/lieferadresseF
   templateUrl: './checkout.component.html',
   standalone: true,
   styleUrls: ['./checkout.component.css'],
-  imports:[WarenkorbComponent,LieferadresseFormComponent]
+  imports:[WarenkorbComponent,LieferadresseFormComponent ,AppComponent]
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
+
+
+  
 
 }
