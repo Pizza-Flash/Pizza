@@ -38,7 +38,8 @@ export class AnmeldenComponent implements OnInit {
       passwort: ''
 
     };
-
+    let router = 'home'
+    
     alert('Erfolgreich Registiert!'
 
     )
@@ -47,7 +48,7 @@ export class AnmeldenComponent implements OnInit {
     const isUserExist = this.signupUser.find(m => m.username == this.loginObj.username && m.passwort ==
       this.loginObj.passwort);
     if (isUserExist != undefined) {
-      alert('Log In Erfolgreich')
+            alert('Log In Erfolgreich')
     }
     else alert('Benutzername oder Passwort sind Falsch!')
   }

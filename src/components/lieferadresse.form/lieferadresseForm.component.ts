@@ -5,16 +5,18 @@ import {Adresse} from "../../models/adresse";
 import {Kunde} from "../../models/kunde";
 import {KundenService} from "../../services/kunden.service";
 import {UnternehmenService} from "../../services/unternehmen.service";
+import { KundenAdresseService } from '../../services/adresse-kunde.service';
+import { AdresseUnternehmenService } from '../../services/adresse-unternehmen.service';
 
 @Component({
   selector: 'app-lieferadresseForm',
   standalone: true,
   imports: [
     FormsModule,
-    LieferadresseListComponent,
   ],
   templateUrl: './lieferadresseForm.component.html',
   styleUrls: ['./lieferadresseForm.component.css'],
+  providers:[KundenService,KundenAdresseService,UnternehmenService,AdresseUnternehmenService]
 })
 export class LieferadresseFormComponent implements OnInit {
   adresse: Adresse;
@@ -25,6 +27,7 @@ export class LieferadresseFormComponent implements OnInit {
     private unternehmenService: UnternehmenService
   ) {
     this.kunde = new Kunde(null, null, null, null);
+    this.kunde.adresse = new Adresse(null, null, null, null);
   }
 
   ngOnInit() {}

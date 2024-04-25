@@ -41,60 +41,10 @@ export class StartsiteComponent implements OnInit {
     }
   }
 
-  addPizzaMargherita(): void {
-    this.artikelHinzufügen('Pizza Margherita', 7.50);
+  addPizza(pizzavariante:string,pizzapreis:number): void {
+    this.artikelHinzufügen(pizzavariante, pizzapreis);
   }
-  addPizzaSalami(): void {
-    this.artikelHinzufügen('Pizza Tunfisch', 9);
-  }
-  addPizzaSucuk(): void {
-    this.artikelHinzufügen('Pizza Margherita', 9);
-  }
-  addPizzaJoJo(): void {
-    this.artikelHinzufügen('Pizza Margherita', 7.80);
-  }
-  addPizzaTonno(): void {
-    this.artikelHinzufügen('Pizza Margherita', 9);
-  }
-  addPizzaHawaii(): void {
-    this.artikelHinzufügen('Pizza Margherita', 9.50);
-  }
-  addPizzaGyros(): void {
-    this.artikelHinzufügen('Pizza Margherita', 9.50);
-  }
-  addPizzaChickenTeriyaki(): void {
-    this.artikelHinzufügen('Pizza Margherita', 10);
-  }
-  addPizzaMafia(): void {
-    this.artikelHinzufügen('Pizza Margherita', 9);
-  }
-  addPizzaDiavolo(): void {
-    this.artikelHinzufügen('Pizza Margherita', 9);
-  }
-  addPizzaHollandaise(): void {
-    this.artikelHinzufügen('Pizza Margherita', 9);
-  }
-  addPizzaDöner(): void {
-    this.artikelHinzufügen('Pizza Margherita', 9);
-  }
-  addPizzaQuattroFormaggi(): void {
-    this.artikelHinzufügen('Pizza Margherita', 9);
-  }
-  addPizzaFruttidiMare(): void {
-    this.artikelHinzufügen('Pizza Margherita', 9);
-  }
-  addPizzaKlassik(): void {
-    this.artikelHinzufügen('Pizza Margherita', 9);
-  }
-  addPizzaMozzarella(): void {
-    this.artikelHinzufügen('Pizza Margherita', 14);
-  }
-  addPizzaFunghi(): void {
-    this.artikelHinzufügen('Pizza Margherita', 14);
-  }
-  addPizzaProsciuttoCrudo(): void {
-    this.artikelHinzufügen('Pizza Margherita', 14);
-  }
+  
 }
 
 
