@@ -5,6 +5,7 @@ import {WarenkorbComponent} from "../warenkorb/warenkorb.component";
 import {CheckoutComponent} from "../checkout/checkout.component";
 import { NgModule } from '@angular/core';
 import { UeberUnsComponent } from '../ueber-uns/ueber-uns.component';
+import { KonfiguratorComponent } from '../konfigurator/konfigurator.component';
 
 export const routes: Routes = [
   {
@@ -33,6 +34,10 @@ export const routes: Routes = [
   {
 path:'impressum',
 component : UeberUnsComponent
+  },
+  {
+    path:'konfigurator',
+    component:KonfiguratorComponent
   }
 
 
