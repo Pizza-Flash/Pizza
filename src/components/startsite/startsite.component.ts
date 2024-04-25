@@ -41,8 +41,8 @@ export class StartsiteComponent implements OnInit {
     }
   }
 
-  addPizza(pizzavariante:string,pizzapreis:number): void {
-    this.artikelHinzufügen(pizzavariante, pizzapreis);
+  addPizza(pizzavariante:string,pizzapreis:string): void {
+    this.artikelHinzufügen(pizzavariante, Number(pizzapreis));
   }
   
 }
