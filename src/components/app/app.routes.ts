@@ -4,6 +4,7 @@ import {AnmeldenComponent} from "../anmelden/anmelden.component";
 import {WarenkorbComponent} from "../warenkorb/warenkorb.component";
 import {CheckoutComponent} from "../checkout/checkout.component";
 import { NgModule } from '@angular/core';
+import { UeberUnsComponent } from '../ueber-uns/ueber-uns.component';
 
 export const routes: Routes = [
   {
@@ -26,6 +27,10 @@ export const routes: Routes = [
   {
     path: 'checkout',
     component: CheckoutComponent
+  },
+  {
+path:'impressum',
+component : UeberUnsComponent
   }
 
 
